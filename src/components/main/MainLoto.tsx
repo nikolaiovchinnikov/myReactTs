@@ -35,13 +35,7 @@ class MainLoto extends Component {
   render() {
     return (
     <div className='container' >
-      <Loto list={this.state.listRandom}/>
-      <button
-            onClick={ this.random } 
-            id='btnLoto' 
-            className='Loto_btn'>
-            Новое число
-      </button>
+      <Loto list={this.state.listRandom} func={this.random}/>
     </div>
     )
   }

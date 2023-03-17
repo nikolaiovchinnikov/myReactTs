@@ -1,6 +1,8 @@
 import './Loto.scss'
 interface LotoProps {
     list: number[],
+    func():void
+
   }
 const Loto = ( props: LotoProps) => {
     return (
@@ -12,6 +14,12 @@ const Loto = ( props: LotoProps) => {
                 <p id='loto:4' className='Loto_list_item'>{props.list[3]}</p>
                 <p id='loto:5' className='Loto_list_item'>{props.list[4]}</p>
             </div>
+            <button
+                    onClick={ props.func } 
+                    id='btnLoto' 
+                    className='Loto_btn'>
+                    Новое число
+            </button>
         </div>
         )
     

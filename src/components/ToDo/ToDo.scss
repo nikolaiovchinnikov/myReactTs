@@ -1,0 +1,43 @@
+.task {
+    width: 500px;
+    min-height: 60px;
+    
+}
+.task_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+}
+.task_btn_icon {
+    width: 30px;
+    height: 30px;
+}
+.task_text,.addTask_input {
+    font-size: 30px;
+}
+.addTask,.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #000000;
+    padding: 0 20px;
+    
+    
+}
+.addTask_input {
+    outline:none;
+    border: none;
+    width: 80%;
+    height: 60px;
+}
+.taskRow {
+    display: flex;
+    align-items: center;
+
+}
+.btnOk{
+    margin-left: 40px;
+}
