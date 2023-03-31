@@ -20,3 +20,26 @@
     border: none;
     background: none;
 }
+.player_loadingBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.player_loadingBar_laiine{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 10px;
+    border: 1px solid gold;
+    width: 100%;
+    border-radius: 5px;
+
+}
+.player_loadingBar_laiine_dot {
+    position: absolute;
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    background-color: red;
+}

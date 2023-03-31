@@ -1,0 +1,27 @@
+.block {
+    width: 30px;
+    height: 30px;
+    background-color: grey;
+}
+.boxItem {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 240px;
+    height: 100%;
+    background-color: aqua;
+}
+.btn {
+    width: 50px;
+    height: 20px;
+}
+.trueClass {
+    background-image:  url('https://albion-time.kz/upload/iblock/1a0/5mu6w3s7t7z8vk0vjfzy1g8112ciligg/koltso_obruchalnoe_sokolov_110031_zoloto_16_5r.jpg');
+    background-size: cover;
+}
+.falseClass {
+    background: none;
+}

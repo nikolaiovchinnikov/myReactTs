@@ -1,16 +1,23 @@
-import React, {useState,useRef,} from 'react';
+import React, {useState,useRef,useEffect} from 'react';
 import PlayerElement from './AudioPlayer';
+import { floor } from '../../scripts/mathScript';
 import './Player.scss'
 let stop:boolean = false;
 const AudioPlayer = () => {
-    // const audioEl:React.useRef<HTMLDivElement | null> = useRef(null) 
     const audioEl = useRef<HTMLAudioElement | null>(null) 
-    
-    // const [stopDuration, setStateDuration] = useState(audioEl.current.duration)
-    
-    
-
     const [stopState,setStateStop] = useState(stop)
+    const [sliderState, setSliderState] = useState(audioEl)
+
+
+
+    const slider = () => {
+        if (audioEl.current)
+        audioEl.current.addEventListener( 'timeupdate',() => {
+           const sliderStateCopy = {...sliderState}
+           setSliderState(sliderStateCopy)
+        })
+    }
+
     const play = () => {
         let stopStateCopy = stopState
         if (stopStateCopy) {
@@ -23,22 +30,23 @@ const AudioPlayer = () => {
             stopStateCopy = true
             if (audioEl.current) {
                 audioEl.current.play()
+                slider()
             }
-            
-            
-            
-           
         }
         setStateStop(stopStateCopy)
     }
-    const slider = () => {
-
-    }
+    
+    
     
     
     return (
         <div>
-            <PlayerElement slider={audioEl.current?.duration} refAudio={audioEl} funcSlider={slider} funcPlay={play} isStop={stopState}/>
+            <PlayerElement 
+            slider={{timeUpdate:floor(sliderState.current?.currentTime),duration:floor(sliderState.current?.duration)}} 
+            refAudio={audioEl} 
+            funcSlider={slider} 
+            funcPlay={play} 
+            isStop={stopState}/>
         </div>
         
         )
