@@ -15,6 +15,4 @@ export const getPercentageNumbers = (argListString:string[]) => {
           }, 0)
         )
     });
-     
-
 }

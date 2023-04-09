@@ -1,10 +1,9 @@
 import './App.scss';
-import AccountingMain from '../components/accounting/AccountingMain';
+import MainFilmPage from '../components/mainFilms/MainLayout';
+
 const App = () => {
     return (
-        <div className='container'>
-            <AccountingMain/>
-        </div>
+            <MainFilmPage/>
         )
     }
 export default App;
